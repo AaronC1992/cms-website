@@ -1,0 +1,224 @@
+/* =========================================
+   CUE MARKETING — SERVICE DETAIL PAGES
+   ========================================= */
+
+/* === HERO === */
+.sp-hero {
+  padding: 8rem 0 5rem;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #0d1f52 100%);
+  color: var(--white);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.sp-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 60% 40%, rgba(26,92,255,.22) 0%, transparent 65%);
+  pointer-events: none;
+}
+.sp-breadcrumb {
+  font-size: .825rem;
+  color: rgba(255,255,255,.5);
+  margin-bottom: 2rem;
+  letter-spacing: .02em;
+}
+.sp-breadcrumb a { color: rgba(255,255,255,.5); text-decoration: none; transition: color .2s; }
+.sp-breadcrumb a:hover { color: var(--white); }
+.sp-breadcrumb span { margin: 0 .4rem; opacity: .4; }
+.sp-hero-icon {
+  width: 76px; height: 76px;
+  background: rgba(26,92,255,.2);
+  border: 1.5px solid rgba(26,92,255,.4);
+  border-radius: 20px;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1.75rem;
+  color: var(--accent);
+}
+.sp-hero-icon svg { width: 36px; height: 36px; }
+.sp-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.18;
+  margin-bottom: 1rem;
+}
+.sp-hero > .container > p {
+  font-size: 1.125rem;
+  color: rgba(255,255,255,.72);
+  max-width: 580px;
+  margin: 0 auto 2.25rem;
+  line-height: 1.65;
+}
+.sp-hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* === SECTIONS === */
+.sp-section { padding: 5rem 0; }
+.sp-section--alt { background: var(--off-white); }
+.sp-section-header { text-align: center; margin-bottom: 3rem; }
+.sp-section-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: .65rem;
+}
+.sp-section-header p {
+  color: var(--text-muted);
+  font-size: 1.025rem;
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+/* === OVERVIEW === */
+.sp-overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.sp-overview-text h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 1rem;
+}
+.sp-overview-text p {
+  color: var(--text-muted);
+  line-height: 1.78;
+  margin-bottom: 1rem;
+  font-size: .975rem;
+}
+.sp-overview-text .btn { margin-top: .75rem; }
+.sp-bullets { list-style: none; display: flex; flex-direction: column; gap: .8rem; }
+.sp-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: .8rem;
+  font-size: .95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.sp-check {
+  width: 22px; height: 22px; min-width: 22px;
+  border-radius: 50%;
+  background: var(--blue-pale);
+  border: 1.5px solid rgba(26,92,255,.25);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231a5cff' stroke-width='2.8'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+  background-size: 13px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* === INCLUDES GRID === */
+.sp-includes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: 1.5rem;
+}
+.sp-include-card {
+  background: var(--white);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  transition: var(--transition);
+}
+.sp-include-card:hover {
+  border-color: var(--blue);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+.sp-include-icon {
+  width: 46px; height: 46px;
+  background: var(--blue-pale);
+  border-radius: var(--radius);
+  border: 1.5px solid rgba(26,92,255,.2);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--blue);
+  margin-bottom: 1rem;
+}
+.sp-include-icon svg { width: 20px; height: 20px; }
+.sp-include-card h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .4rem; }
+.sp-include-card p { font-size: .875rem; color: var(--text-muted); line-height: 1.6; }
+
+/* === PROCESS STEPS === */
+.sp-steps {
+  display: flex;
+  flex-direction: column;
+  max-width: 780px;
+  margin: 0 auto;
+  position: relative;
+}
+.sp-steps::before {
+  content: '';
+  position: absolute;
+  left: 27px; top: 28px; bottom: 28px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--blue) 0%, rgba(26,92,255,.12) 100%);
+}
+.sp-step { display: flex; align-items: flex-start; gap: 1.5rem; padding: 1.5rem 0; }
+.sp-step-num {
+  width: 56px; height: 56px; min-width: 56px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: var(--white);
+  font-weight: 800;
+  font-size: 1.05rem;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; z-index: 1;
+  box-shadow: 0 4px 16px rgba(26,92,255,.28);
+}
+.sp-step-body { padding-top: .8rem; }
+.sp-step-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: .3rem; }
+.sp-step-body p { font-size: .925rem; color: var(--text-muted); line-height: 1.6; }
+
+/* === BOTTOM CTA === */
+.sp-cta {
+  background: linear-gradient(135deg, var(--navy) 0%, #0d2060 100%);
+  padding: 5.5rem 0;
+  text-align: center;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.sp-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 60%, rgba(26,92,255,.2) 0%, transparent 60%);
+  pointer-events: none;
+}
+.sp-cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  margin-bottom: .8rem;
+  position: relative;
+}
+.sp-cta p {
+  color: rgba(255,255,255,.72);
+  font-size: 1.1rem;
+  margin-bottom: 2.25rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  position: relative;
+}
+.sp-cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; }
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .sp-overview { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (max-width: 680px) {
+  .sp-hero { padding: 7rem 0 3.5rem; }
+  .sp-section { padding: 3.5rem 0; }
+  .sp-steps::before { left: 23px; }
+  .sp-step-num { width: 48px; height: 48px; min-width: 48px; font-size: .9rem; }
+}
